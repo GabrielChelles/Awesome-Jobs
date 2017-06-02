@@ -1,0 +1,88 @@
+/* IMPORTS */
+
+@font-face{
+	font-family: 'openSans';
+	src: url('../lib/fonts/Open_Sans/OpenSans-Regular.ttf');
+	font-size: 1rem;
+}
+
+@font-face {
+	font-family: 'openSans-Light';
+	src: url('../lib/fonts/Open_Sans/openSans-Light.ttf');
+	font-size: 1rem;
+}
+
+/* Elementos Pre Definidos */
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-os-box-sizing: border-box;
+}
+
+/* Header */
+//Cores Cabecalho
+.ver {background: @ver;.larg-cor;}
+.ama {background: @ama;.larg-cor;}
+.azu {background: @azu;.larg-cor;}
+.rox {background: @rox;.larg-cor;}
+
+//container do menu e logo
+.container-header {
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
+.blocoMenu {
+	margin: 30px 0;
+}
+
+.logo {
+	float: left;
+}
+
+.menu-ul .selected {
+	color: darken(@black, 50%);
+	font-weight: 900;	
+		&:hover{
+			color: lighten(@black, 30%);
+		}
+}
+
+.menu {
+	float: right;
+		
+		ul{
+			margin-top: 3rem;
+
+				li{
+					display: inline-block;
+					margin: 0 .3125rem;
+
+						a{
+							text-decoration: none;
+							color: lighten(@black, 50%);
+							font-family: 'openSans';
+								&:hover{
+									color: lighten(@black, 10%);
+									font-weight: 900;
+								}//fechaHover
+						}//fechaA
+				}//fechaLI
+		}//fechaUL
+}//fechaMENU
+
+@media (max-width: 768px) {//celular
+	.menu {
+		float: none;
+	}
+
+	.logo{
+		margin-left: 30px;
+		float: none;
+	}
+
+}
